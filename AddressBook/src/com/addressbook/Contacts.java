@@ -7,11 +7,10 @@ public class Contacts {
 	String state;
 	String city;
 	int pincode;
-	int phoneNumber;
+	String phoneNumber;
 	String emailID;
-	
-	
-	public Contacts(String firstName, String lastName, String state, String city, int pincode, int phoneNumber,
+
+	public Contacts(String firstName, String lastName, String state, String city, int pincode, String phoneNumber,
 			String emailID) {
 		super();
 		this.firstName = firstName;
@@ -22,7 +21,18 @@ public class Contacts {
 		this.phoneNumber = phoneNumber;
 		this.emailID = emailID;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Contacts [firstName=" + firstName + ", lastName=" + lastName + ", state=" + state + ", city=" + city
+				+ ", pincode=" + pincode + ", phoneNumber=" + phoneNumber + ", emailID=" + emailID + "]";
+	}
+
+	public Contacts() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -53,10 +63,10 @@ public class Contacts {
 	public void setPincode(int pincode) {
 		this.pincode = pincode;
 	}
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getEmailID() {
@@ -64,7 +74,6 @@ public class Contacts {
 	}
 	public void setEmailID(String emailID) {
 		this.emailID = emailID;
-	}
-	
 
+	}
 }
